@@ -36,8 +36,9 @@ function App() {
   const [chats, setChats] = useState([
     {
       id: 1,
-      text: "Hi, how may I help you today?",
-      prompt: "Hi, how may I help you today?",
+      text: "Hi, how may I help you today? I can help you with making transfer, getting your balance and fetching transactions history",
+      prompt:
+        "Hi, how may I help you today? I can help you with making transfer, getting your balance and fetching transactions history",
     },
   ]);
 
@@ -71,6 +72,8 @@ function App() {
           data: res.data?.data,
         });
         setChats(newChats);
+        chatRef.current.scrollTop = chatRef.current.scrollHeight;
+        inputRef.current.focus();
       });
   };
 

@@ -168,4 +168,7 @@
     padding: 0;
     flex: 1;
   }
+  .ChatContainer {
+    margin-top: 60px;
+  }
 }
